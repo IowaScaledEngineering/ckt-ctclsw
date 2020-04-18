@@ -1,0 +1,4 @@
+schematics ckt-ctclsw.sch
+output-name ../pcb/ckt-ctclsw
+skip-m4
+elements-dir ../../../footprints

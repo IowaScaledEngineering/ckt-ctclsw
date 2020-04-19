@@ -1540,6 +1540,24 @@ Element["" "SolderJumperSmall" "JP21" "unknown" 3420.00mil 3610.00mil -64.00mil 
 	Pad[19.00mil -15.00mil 19.00mil 15.00mil 30.00mil 20.00mil 30.00mil "2" "2" "square"]
 
 	)
+
+Element["" "0805" "D1" "unknown" 4720.00mil 3620.00mil 83.50mil -31.50mil 0 100 ""]
+(
+	Pad[-35.43mil -3.93mil -35.43mil 3.93mil 51.18mil 20.00mil 57.18mil "1" "1" "square"]
+	Pad[35.43mil -3.93mil 35.43mil 3.93mil 51.18mil 20.00mil 57.18mil "2" "2" "square"]
+	ElementLine [-3.93mil -27.55mil 3.93mil -27.55mil 10.00mil]
+	ElementLine [-3.93mil 27.55mil 3.93mil 27.55mil 10.00mil]
+
+	)
+
+Element["" "0805" "R1" "1k" 4720.00mil 3715.00mil 78.93mil -31.50mil 0 100 ""]
+(
+	Pad[35.43mil -3.93mil 35.43mil 3.93mil 51.18mil 20.00mil 57.18mil "1" "1" "square"]
+	Pad[-35.43mil -3.93mil -35.43mil 3.93mil 51.18mil 20.00mil 57.18mil "2" "2" "square"]
+	ElementLine [-3.93mil 27.55mil 3.93mil 27.55mil 10.00mil]
+	ElementLine [-3.93mil -27.55mil 3.93mil -27.55mil 10.00mil]
+
+	)
 Layer(1 "top")
 (
 	Line[1305.00mil 860.00mil 1555.00mil 860.00mil 55.00mil 20.00mil "clearline"]
@@ -1676,6 +1694,9 @@ Layer(1 "top")
 	Line[4855.00mil 2100.00mil 5025.00mil 2100.00mil 30.00mil 20.00mil "clearline"]
 	Line[5025.00mil 2100.00mil 5125.00mil 2000.00mil 30.00mil 20.00mil "clearline"]
 	Line[5125.00mil 2000.00mil 5125.00mil 1775.00mil 30.00mil 20.00mil "clearline"]
+	Line[118.9881mm 3715.00mil 118.9881mm 3825.00mil 10.00mil 20.00mil ""]
+	Line[120.7879mm 3715.00mil 120.7879mm 3620.00mil 10.00mil 20.00mil "clearline"]
+	Line[118.9881mm 3620.00mil 118.9881mm 3505.00mil 10.00mil 20.00mil ""]
 	Polygon("clearpoly")
 	(
 		[565.00mil 130.00mil] [815.00mil 130.00mil] [815.00mil 1045.00mil] [565.00mil 1045.00mil] 
@@ -1908,6 +1929,8 @@ Layer(5 "silk")
 	Line[1745.00mil 3295.00mil 1775.00mil 3295.00mil 10.00mil 20.00mil "clearline"]
 	Line[1360.00mil 3280.00mil 1360.00mil 3310.00mil 10.00mil 20.00mil "clearline"]
 	Line[1345.00mil 3295.00mil 1375.00mil 3295.00mil 10.00mil 20.00mil "clearline"]
+	Line[4755.00mil 3545.00mil 4755.00mil 3575.00mil 10.00mil 20.00mil "clearline"]
+	Line[4740.00mil 3560.00mil 4770.00mil 3560.00mil 10.00mil 20.00mil "clearline"]
 	Text[300.00mil 1780.00mil 0 166 "SWITCH #3" "clearline"]
 	Text[5285.00mil 1770.00mil 0 166 "SWITCH #1" "clearline"]
 	Text[2780.00mil 3310.00mil 0 166 "SWITCH #2" "clearline"]
@@ -1958,6 +1981,7 @@ NetList()
 		Connect("K10-A1")
 		Connect("K20-A1")
 		Connect("K30-A1")
+		Connect("R1-2")
 		Connect("R10-2")
 		Connect("R11-2")
 		Connect("R12-2")
@@ -1976,6 +2000,7 @@ NetList()
 	(
 		Connect("C1-2")
 		Connect("C2-2")
+		Connect("D1-1")
 		Connect("J2-1")
 		Connect("SW1-C")
 		Connect("SW2-C")
@@ -2174,5 +2199,10 @@ NetList()
 	(
 		Connect("J1-1")
 		Connect("U1-4")
+	)
+	Net("unnamed_net33" "(unknown)")
+	(
+		Connect("D1-2")
+		Connect("R1-1")
 	)
 )
